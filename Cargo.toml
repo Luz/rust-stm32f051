@@ -1,0 +1,22 @@
+[package]
+name = "rust-stm32f051"
+version = "0.1.0"
+authors = ["Luz"]
+description = "Blinking example for STM32F0 Discovery Board written in Rust"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Luz/rust-stm32f051"
+edition = "2018"
+
+[dependencies]
+cortex-m-rt = "0.6.13"
+
+# cortex-m version 0.6.0 instead of current one, since some other dependency needs 0.6.0 and then linker would fail because of duplicated functions
+cortex-m = "0.6.0"
+
+panic-halt = "0.2.0"
+
+stm32f0xx-hal = {version = "0.17.1", features = ["rt", "stm32f051"]}
+
+nb = "1.0.0"
+
