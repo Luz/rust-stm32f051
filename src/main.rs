@@ -14,8 +14,8 @@ use cortex_m_rt::entry;
 fn main() -> ! {
     let mut p = pac::Peripherals::take().unwrap();
 
-    // Configure clock to 8 MHz and freeze it
-    let mut rcc = p.RCC.configure().sysclk(8.mhz()).freeze(&mut p.FLASH);
+    // Configure clock to 48 MHz and freeze it
+    let mut rcc = p.RCC.configure().sysclk(48.mhz()).freeze(&mut p.FLASH);
 
     // Configure PC8 as output, named led
     let gpioc = p.GPIOC.split(&mut rcc);
