@@ -19,6 +19,7 @@ services.udev.packages = [ pkgs.stlink];
 Install thumb instructions for Cortex M0 core and prepare binutils
 ```Shell
 rustup install stable
+rustup default stable
 rustup target add thumbv6m-none-eabi
 cargo install cargo-binutils
 ```
