@@ -21,6 +21,7 @@ Install thumb instructions for Cortex M0 core and prepare binutils
 rustup install stable
 rustup default stable
 rustup target add thumbv6m-none-eabi
+rustup component add llvm-tools-preview
 cargo install cargo-binutils
 ```
 
