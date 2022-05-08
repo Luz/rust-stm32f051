@@ -8,9 +8,7 @@ use stm32f0xx_hal as hal;
 
 use hal::{pac, prelude::*, time::Hertz, timers::*};
 
-use cortex_m_rt::entry;
-
-#[entry]
+#[cortex_m_rt::entry]
 fn main() -> ! {
     let mut p = pac::Peripherals::take().unwrap();
 
